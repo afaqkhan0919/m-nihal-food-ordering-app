@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M Nihal Fast Food & BBQ</title>
+    <meta
+      name="description"
+      content="Order fresh fast food online from M Nihal Fast Food & BBQ."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Freshly prepared</p>
+          <h1>M Nihal Fast Food & BBQ</h1>
+        </div>
+        <div class="status-pill">Open Now</div>
+      </header>
+
+      <main class="order-layout">
+        <section class="menu-panel">
+          <div class="section-header">
+            <h2>Menu</h2>
+          </div>
+
+          <div id="menuList" class="menu-list" aria-live="polite"></div>
+        </section>
+
+        <aside class="checkout-panel">
+          <div class="section-header compact">
+            <h2>Your Order</h2>
+            <span id="itemCountBadge" class="count-badge">0 items</span>
+          </div>
+
+          <div id="orderSummary" class="order-summary empty">
+            <p>Your cart is empty.</p>
+          </div>
+
+          <div class="customer-form">
+            <label>
+              <span>Name</span>
+              <input id="customerName" type="text" placeholder="Enter your name" />
+            </label>
+            <label>
+              <span>Phone Number</span>
+              <input id="customerPhone" type="tel" placeholder="03xx-xxxxxxx" />
+            </label>
+            <label>
+              <span>Delivery Address</span>
+              <textarea
+                id="customerAddress"
+                rows="3"
+                placeholder="Enter delivery address"
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="totals-box">
+            <div class="total-row">
+              <span>Subtotal</span>
+              <strong id="subtotalValue">PKR 0</strong>
+            </div>
+            <div class="total-row">
+              <span>Delivery</span>
+              <strong id="deliveryValue">PKR 150</strong>
+            </div>
+            <div class="total-row grand">
+              <span>Total</span>
+              <strong id="totalValue">PKR 150</strong>
+            </div>
+          </div>
+
+          <button id="placeOrderBtn" class="place-order-btn" type="button">
+            Place Order
+          </button>
+
+          <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
